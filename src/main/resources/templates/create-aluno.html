@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inserir Aluno</title>
+</head>
+<body>
+	<h1>Inserir Aluno</h1>
+	<form action="#" th:action="@{/alunos}" th:object="${aluno}"
+	   method="post">
+	RA:<input type='text' th:field="*{ra}"/><br/>
+	Nome:<input type='text' th:field="*{nome}"/><br/>
+	Data de nascimento:<input type='text' th:field="*{dataNascimento}"/><br/>
+	Renda:<input type='text' th:field="*{renda}"/><br/>
+	<button type="submit">Gravar</button>
+	</form>
+</body>
+</html>
