@@ -6,6 +6,7 @@ public class Aluno {
 	private int ra;
 	private String nome;
 	private Date dataNascimento;
+
 	private Double renda;
 	public Aluno() {
 		super();
