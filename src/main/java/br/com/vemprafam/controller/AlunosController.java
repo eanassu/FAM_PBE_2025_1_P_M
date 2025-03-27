@@ -16,6 +16,16 @@ public class AlunosController {
 
 	private DaoAluno dao = new DaoAluno();
 
+	@GetMapping
+	public String showHomeAlunos(Model model) {
+		return "alunos";
+	}
+
+	@GetMapping("/")
+	public String showHomeAlunosBarra(Model model) {
+		return "alunos";
+	}
+
 	@GetMapping("/new")
 	public String showInsertForm(Model model) {
 		model.addAttribute("aluno",new Aluno());
