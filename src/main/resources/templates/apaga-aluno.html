@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Excluir aluno</title>
+</head>
+<body>
+<form action="#" th:action="@{/alunos/delete}"
+   th:object="${aluno}" method="post">
+RA:<input type="text" th:field="*{ra}"/>
+<input type='submit' value="excluir"/>
+</form>
+</body>
+</html>

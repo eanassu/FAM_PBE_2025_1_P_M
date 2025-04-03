@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Inserir Aluno</h1>
-	<form action="#" th:action="@{/alunos}" th:object="${aluno}"
+	<form action="#" th:action="@{/alunos/insert}" th:object="${aluno}"
 	   method="post">
 	RA:<input type='text' th:field="*{ra}"/><br/>
 	Nome:<input type='text' th:field="*{nome}"/><br/>

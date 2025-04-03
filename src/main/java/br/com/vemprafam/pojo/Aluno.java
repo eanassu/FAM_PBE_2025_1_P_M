@@ -3,7 +3,7 @@ package br.com.vemprafam.pojo;
 import java.util.Date;
 
 public class Aluno {
-	private int ra;
+	private Integer ra;
 	private String nome;
 	private Date dataNascimento;
 
@@ -19,7 +19,7 @@ public class Aluno {
 		this.dataNascimento = dataNascimento;
 		this.renda = renda;
 	}
-	public int getRa() {
+	public Integer getRa() {
 		return ra;
 	}
 	public void setRa(int ra) {
