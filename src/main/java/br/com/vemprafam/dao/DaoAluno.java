@@ -9,22 +9,26 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import br.com.vemprafam.pojo.Aluno;
 
+@Repository
 public class DaoAluno {
 	private Connection connection;
-	private String url = "jdbc:hsqldb:hsql://localhost:9001/";
-	private String user="SA";
-	private String password="";
 
-	public DaoAluno() {
-		if( connection == null ) {
-			try {
-				connection = DriverManager.getConnection(url,user,password);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+	@Autowired
+	public DaoAluno(DataSource datasource) {
+		try {
+			this.connection = datasource.getConnection();
+		} catch(SQLException e) {
+			e.printStackTrace();
 		}
+	}
+	public DaoAluno() {
 	}
 
 	public void insert( Aluno aluno ) {

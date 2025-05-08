@@ -19,7 +19,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping("/alunos")
 public class AlunosController {
 
-	private DaoAluno dao = new DaoAluno();
+	private DaoAluno dao;
+
+	public AlunosController(DaoAluno dao) {
+		this.dao = dao;
+	}
 
 	@GetMapping
 	public String showHomeAlunos(Model model) {
